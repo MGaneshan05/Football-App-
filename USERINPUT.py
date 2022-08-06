@@ -5,5 +5,7 @@ def user_input():
     szn = input()
     print("Please type the desired player")
     plyr = input()
+    data = [lg, szn, plyr]
+    return data
 
 
