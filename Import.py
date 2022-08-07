@@ -1,11 +1,13 @@
 import requests
 import USERINPUT
+import leagues
 
 url = "https://api-football-v1.p.rapidapi.com/v3/players"
 
 inputs = USERINPUT.user_input()
-
-querystring = {"league": "%s" % inputs[0],"season": "%s" % inputs[1], "search": "%s" % inputs[2]}
+lg = leagues.league(inputs[0], inputs[1])
+print(lg)
+querystring = {"league": "%s" % lg, "season": "%s" % inputs[2], "search": "%s" % inputs[3]}
 
 headers = {
 	"X-RapidAPI-Key": ,

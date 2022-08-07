@@ -1,30 +1,33 @@
-
 import requests
 import json
-url = "https://api-football-v1.p.rapidapi.com/v3/leagues"
 
-querystring = {"name":"premier league","country":"england","season":"2020"}
 
-headers = {
-	"X-RapidAPI-Key":  ,
-	"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
-}
+def league(country, lge):
 
-response = requests.request("GET", url, headers=headers, params=querystring)
+	url = "https://api-football-v1.p.rapidapi.com/v3/leagues"
 
-r = response.json()
+	querystring = {"name": "%s" % lge, "country": "%s" % country, "season": "2020"}
 
-json_object = json.dumps(r, indent=4)
+	headers = {"X-RapidAPI-Key":
+	, "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
 
-# Writing to sample.json
-with open("user_league.json", "w") as outfile:
-	outfile.write(json_object)
+	response = requests.request("GET", url, headers=headers, params=querystring)
 
-with open('user_league.json', 'r') as openfile:
+	r = response.json()
+
+	json_object = json.dumps(r, indent=4)
+
+	# Writing to sample.json
+	with open("user_league.json", "w") as outfile:
+		outfile.write(json_object)
+
 	# Reading from json file
-	json_object = json.load(openfile)
+	with open('user_league.json', 'r') as openfile:
+		json_object = json.load(openfile)
 
-s = str(json_object['response'][0])
-print(s[18:20])
-lig = s[18:20]
+	s = str(json_object['response'][0])
+
+	# print(s[18:20])
+	lig = s[18:20]
+	return lig
 
