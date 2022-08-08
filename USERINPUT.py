@@ -5,9 +5,11 @@ def user_input():
     lg = input()
     print("Please type the desired season")
     szn = input()
+    print("Please type the desired team:")
+    tm = input()
     print("Please type the desired player")
     plyr = input()
-    data = [cntry, lg, szn, plyr]
+    data = [cntry, lg, szn, plyr, tm]
     return data
 
 
