@@ -9,7 +9,7 @@ def league(country, lge):
 
 	querystring = {"name": "%s" % lge, "country": "%s" % country, "season": "2020"}
 
-	headers = {"X-RapidAPI-Key": ,
+	headers = {"X-RapidAPI-Key":  ,
 				"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
 	}
 
