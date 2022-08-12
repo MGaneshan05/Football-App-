@@ -9,7 +9,7 @@ def league(country, lge):
 
 	querystring = {"name": "%s" % lge, "country": "%s" % country, "season": "2020"}
 
-	headers = {"X-RapidAPI-Key":  ,
+	headers = {"X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315" ,
 				"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
 	}
 
@@ -30,7 +30,5 @@ def league(country, lge):
 	s = str(json_object['response'][0])
 
 	m = str(re.search(r'\d+', s).group())
-	# print(s[18:20])
-	lig = s[18:20]
 	return m
 

@@ -1,3 +1,4 @@
+
 def user_input():
     print("Please type the desired country:")
     cntry = input()
