@@ -3,11 +3,11 @@ import json
 import re
 
 
-def league(country, lge):
+def league(country, lge, szn):
 
 	url = "https://api-football-v1.p.rapidapi.com/v3/leagues"
 
-	querystring = {"name": "%s" % lge, "country": "%s" % country, "season": "2020"}
+	querystring = {"name": "%s" % lge, "country": "%s" % country, "season": "%s" % szn}
 
 	headers = {"X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315" ,
 				"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"

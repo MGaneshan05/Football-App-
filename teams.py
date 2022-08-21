@@ -3,11 +3,11 @@ import json
 import re
 
 
-def team(club, leg):
+def team(club, leg, szn):
 
 	url = "https://api-football-v1.p.rapidapi.com/v3/teams"
 
-	querystring = {"name": "%s" % club, "league": "%s" % leg, "season": "2020"}
+	querystring = {"name": "%s" % club, "league": "%s" % leg, "season": "%s" % szn}
 
 	headers = {
 		"X-RapidAPI-Key":"bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315" ,
