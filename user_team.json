@@ -1,8 +1,8 @@
 {
     "get": "teams",
     "parameters": {
-        "league": "39",
-        "name": "Chelsea",
+        "league": "61",
+        "name": "Paris Saint Germain",
         "season": "2022"
     },
     "errors": [],
@@ -14,22 +14,22 @@
     "response": [
         {
             "team": {
-                "id": 49,
-                "name": "Chelsea",
-                "code": "CHE",
-                "country": "England",
-                "founded": 1905,
+                "id": 85,
+                "name": "Paris Saint Germain",
+                "code": "PAR",
+                "country": "France",
+                "founded": 1970,
                 "national": false,
-                "logo": "https://media.api-sports.io/football/teams/49.png"
+                "logo": "https://media.api-sports.io/football/teams/85.png"
             },
             "venue": {
-                "id": 519,
-                "name": "Stamford Bridge",
-                "address": "Fulham Road",
-                "city": "London",
-                "capacity": 41841,
+                "id": 671,
+                "name": "Parc des Princes",
+                "address": "24, rue du Commandant Guilbaud",
+                "city": "Paris",
+                "capacity": 47929,
                 "surface": "grass",
-                "image": "https://media.api-sports.io/football/venues/519.png"
+                "image": "https://media.api-sports.io/football/venues/671.png"
             }
         }
     ]

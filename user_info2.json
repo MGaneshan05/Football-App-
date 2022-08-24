@@ -3,7 +3,7 @@
     "parameters": {
         "league": "61",
         "team": "85",
-        "search": "Neymar",
+        "search": "Mbappe",
         "season": "2022"
     },
     "errors": [],
@@ -15,21 +15,21 @@
     "response": [
         {
             "player": {
-                "id": 276,
-                "name": "Neymar",
-                "firstname": "Neymar",
-                "lastname": "da Silva Santos J\u00fanior",
-                "age": 30,
+                "id": 278,
+                "name": "K. Mbapp\u00e9",
+                "firstname": "Kylian",
+                "lastname": "Mbapp\u00e9 Lottin",
+                "age": 24,
                 "birth": {
-                    "date": "1992-02-05",
-                    "place": "Mogi das Cruzes",
-                    "country": "Brazil"
+                    "date": "1998-12-20",
+                    "place": "Paris",
+                    "country": "France"
                 },
-                "nationality": "Brazil",
-                "height": "175 cm",
-                "weight": "68 kg",
+                "nationality": "France",
+                "height": "178 cm",
+                "weight": "73 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/276.png"
+                "photo": "https://media.api-sports.io/football/players/278.png"
             },
             "statistics": [
                 {
@@ -47,12 +47,12 @@
                         "season": 2022
                     },
                     "games": {
-                        "appearences": 3,
-                        "lineups": 3,
-                        "minutes": 270,
+                        "appearences": 2,
+                        "lineups": 2,
+                        "minutes": 176,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "9.733333",
+                        "rating": "8.600000",
                         "captain": false
                     },
                     "substitutes": {
@@ -61,37 +61,37 @@
                         "bench": 0
                     },
                     "shots": {
-                        "total": 6,
-                        "on": 5
+                        "total": 11,
+                        "on": 7
                     },
                     "goals": {
-                        "total": 5,
+                        "total": 4,
                         "conceded": 0,
-                        "assists": 6,
+                        "assists": null,
                         "saves": null
                     },
                     "passes": {
-                        "total": 184,
-                        "key": 14,
-                        "accuracy": 49
+                        "total": 69,
+                        "key": 3,
+                        "accuracy": 29
                     },
                     "tackles": {
-                        "total": 5,
-                        "blocks": 1,
-                        "interceptions": null
+                        "total": 1,
+                        "blocks": null,
+                        "interceptions": 2
                     },
                     "duels": {
-                        "total": 36,
-                        "won": 21
+                        "total": 24,
+                        "won": 10
                     },
                     "dribbles": {
-                        "attempts": 12,
-                        "success": 7,
+                        "attempts": 14,
+                        "success": 6,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 9,
-                        "committed": 6
+                        "drawn": 2,
+                        "committed": null
                     },
                     "cards": {
                         "yellow": 0,
@@ -101,8 +101,8 @@
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 1,
-                        "missed": 0,
+                        "scored": 0,
+                        "missed": 1,
                         "saved": null
                     }
                 }
