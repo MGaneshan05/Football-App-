@@ -10,7 +10,7 @@ import os
 HEIGHT = 1080
 WIDTH = 1920
 
-
+switch = True
 
 def picture1(info):
     url = info['response'][0]['player']['photo']
@@ -131,199 +131,256 @@ def format_response(info):
     return basic_info
 
 def ent1(entry1,entry2,entry3,entry4,entry5):
-    if entry5 == 'Son':
+    try:
+        if switch == False:
+            x = "#26242f"
 
-        url = "https://api-football-v1.p.rapidapi.com/v3/players"
+        else:
+            x = "white"
 
-        lg = leagues.league(entry1, entry2, entry3)
-        print(lg)
+        if entry5 == 'Son':
 
-        team = teams.team(entry4, lg, entry3)
+            url = "https://api-football-v1.p.rapidapi.com/v3/players"
 
-        print(team)
+            lg = leagues.league(entry1, entry2, entry3)
+            print(lg)
 
-        querystring = {"id": "186", "league": "%s" % lg, "season": "%s" % entry3}
+            team = teams.team(entry4, lg, entry3)
 
-        headers = {
-            "X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315",
-            "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
+            print(team)
 
-        response = requests.request("GET", url, headers=headers, params=querystring)
+            querystring = {"id": "186", "league": "%s" % lg, "season": "%s" % entry3}
 
-        info = response.json()
+            headers = {
+                "X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315",
+                "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
 
-        q = picture1(info)
-        o = picture2(info)
-        j = picture3(info)
+            response = requests.request("GET", url, headers=headers, params=querystring)
 
-        json_object = json.dumps(info, indent=4)
+            info = response.json()
 
-        # Writing to sample.json
+            q = picture1(info)
+            o = picture2(info)
+            j = picture3(info)
 
-        with open("user_info.json", "w") as outfile:
-            outfile.write(json_object)
+            json_object = json.dumps(info, indent=4)
 
-        img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
-        img1_label = tk.Label(root, image=img1, bg='white')
-        img1_label.photo = img1
-        img1_label.place(x=250, y=390, relwidth=0.1, relheight=0.15)
-        img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
-        img2_label = tk.Label(root, image=img2, bg='white')
-        img2_label.photo = img2
-        img2_label.place(x=250, y=560, relwidth=0.1, relheight=0.15)
-        img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
-        img3_label = tk.Label(root, image=img3, bg='white')
-        img3_label.photo = img3
-        img3_label.place(x=250, y=720, relwidth=0.1, relheight=0.2)
-        label1['text'] = format_response(info)
+            # Writing to sample.json
+
+            with open("user_info.json", "w") as outfile:
+                outfile.write(json_object)
+
+            img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
+            img1_label = tk.Label(root, image=img1, bg=x)
+            img1_label.photo = img1
+            img1_label.place(x=250, y=390, relwidth=0.1, relheight=0.18)
+            img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
+            img2_label = tk.Label(root, image=img2, bg=x)
+            img2_label.photo = img2
+            img2_label.place(x=250, y=560, relwidth=0.1, relheight=0.15)
+            img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
+            img3_label = tk.Label(root, image=img3, bg=x)
+            img3_label.photo = img3
+            img3_label.place(x=250, y=720, relwidth=0.1, relheight=0.2)
+            label1['text'] = format_response(info)
+
+            def clear():
+                label1.config(text='')
+                img1_label.config(image='')
+                img2_label.config(image='')
+                img3_label.config(image='')
+
+            button3 = tk.Button(upper_frame, text='Clear Slot 1', font=('Trebuchet MS', 15), command=lambda: clear())
+
+            button3.place(relx=0.7, rely=0.6, relwidth=0.15, relheight=0.4)
 
 
+        else:
+            url = "https://api-football-v1.p.rapidapi.com/v3/players"
 
+            lg = leagues.league(entry1, entry2, entry3)
+            print(lg)
 
-    else:
-        url = "https://api-football-v1.p.rapidapi.com/v3/players"
+            team = teams.team(entry4, lg, entry3)
 
-        lg = leagues.league(entry1, entry2, entry3)
-        print(lg)
+            print(team)
 
-        team = teams.team(entry4, lg, entry3)
+            querystring = {"team": "%s" % team, "league": "%s" % lg, "season": "%s" % entry3, "search": "%s" % entry5}
 
-        print(team)
+            headers = {
+                "X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315",
+                "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
 
-        querystring = {"team": "%s" % team, "league": "%s" % lg, "season": "%s" % entry3, "search": "%s" % entry5}
+            response = requests.request("GET", url, headers=headers, params=querystring)
 
-        headers = {
-        "X-RapidAPI-Key":"bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315" ,
-        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
+            info = response.json()
 
-        response = requests.request("GET", url, headers=headers, params=querystring)
+            q = picture1(info)
+            o = picture2(info)
+            j = picture3(info)
 
-        info = response.json()
+            json_object = json.dumps(info, indent=4)
 
-        q = picture1(info)
-        o = picture2(info)
-        j = picture3(info)
+            # Writing to sample.json
 
-        json_object = json.dumps(info, indent=4)
+            with open("user_info.json", "w") as outfile:
+                outfile.write(json_object)
 
-        # Writing to sample.json
+            img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
+            img1_label = tk.Label(root, image=img1, bg=x)
+            img1_label.photo = img1
+            img1_label.place(x=250, y=390, relwidth=0.1, relheight=0.18)
+            img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
+            img2_label = tk.Label(root, image=img2, bg=x)
+            img2_label.photo = img2
+            img2_label.place(x=250, y=560, relwidth=0.1, relheight=0.15)
+            img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
+            img3_label = tk.Label(root, image=img3, bg=x)
+            img3_label.photo = img3
+            img3_label.place(x=250, y=720, relwidth=0.1, relheight=0.2)
+            label1['text'] = format_response(info)
 
-        with open("user_info.json", "w") as outfile:
-            outfile.write(json_object)
+            def clear():
+                label1.config(text='')
+                img1_label.config(image='')
+                img2_label.config(image='')
+                img3_label.config(image='')
 
-        img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
-        img1_label = tk.Label(root, image=img1, bg="white")
-        img1_label.photo = img1
-        img1_label.place(x=250, y=390, relwidth=0.1, relheight=0.15)
-        img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
-        img2_label = tk.Label(root, image=img2, bg="white")
-        img2_label.photo = img2
-        img2_label.place(x=250, y=560, relwidth=0.1, relheight=0.15)
-        img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
-        img3_label = tk.Label(root, image=img3, bg="white")
-        img3_label.photo = img3
-        img3_label.place(x=250, y=720, relwidth=0.1, relheight=0.2)
-        label1['text'] = format_response(info)
+            button3 = tk.Button(upper_frame, text='Clear Slot 1', font=('Trebuchet MS', 15), command=lambda: clear())
+
+            button3.place(relx=0.7, rely=0.6, relwidth=0.15, relheight=0.4)
+    except:
+        print('sad')
+        label1.config(text='There was an error processing \nyour request.'
+                               '\nPlease check your spelling \nand try again.')
+
 
     return info
 
 
 def ent2(entry1,entry2,entry3,entry4,entry5):
+    try:
+        if switch == False:
+            x = "#26242f"
 
-    if entry5 == 'Son':
+        else:
+            x = "white"
 
-        url = "https://api-football-v1.p.rapidapi.com/v3/players"
+        if entry5 == 'Son':
 
-        lg = leagues.league(entry1, entry2, entry3)
-        print(lg)
+            url = "https://api-football-v1.p.rapidapi.com/v3/players"
 
-        team = teams.team(entry4, lg, entry3)
+            lg = leagues.league(entry1, entry2, entry3)
+            print(lg)
 
-        print(team)
+            team = teams.team(entry4, lg, entry3)
 
-        querystring = {"id": "186", "league": "%s" % lg, "season": "%s" % entry3}
+            print(team)
 
-        headers = {
-            "X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315",
-            "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
+            querystring = {"id": "186", "league": "%s" % lg, "season": "%s" % entry3}
 
-        response = requests.request("GET", url, headers=headers, params=querystring)
+            headers = {
+                "X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315",
+                "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
 
-        info = response.json()
+            response = requests.request("GET", url, headers=headers, params=querystring)
 
-        q = picture1(info)
-        o = picture2(info)
-        j = picture3(info)
+            info = response.json()
 
-        json_object = json.dumps(info, indent=4)
+            q = picture1(info)
+            o = picture2(info)
+            j = picture3(info)
 
-        # Writing to sample.json
+            json_object = json.dumps(info, indent=4)
 
-        with open("user_info2.json", "w") as outfile:
-            outfile.write(json_object)
+            # Writing to sample.json
 
-        img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
-        img1_label = tk.Label(root, image=img1, bg='white')
-        img1_label.photo = img1
-        img1_label.place(x=750, y=390, relwidth=0.1, relheight=0.15)
-        img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
-        img2_label = tk.Label(root, image=img2, bg='white')
-        img2_label.photo = img2
-        img2_label.place(x=750, y=560, relwidth=0.1, relheight=0.15)
-        img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
-        img3_label = tk.Label(root, image=img3, bg='white')
-        img3_label.photo = img3
-        img3_label.place(x=750, y=720, relwidth=0.1, relheight=0.2)
-        label2['text'] = format_response(info)
+            with open("user_info2.json", "w") as outfile:
+                outfile.write(json_object)
+
+            img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
+            img1_label = tk.Label(root, image=img1, bg=x)
+            img1_label.photo = img1
+            img1_label.place(x=750, y=389, relwidth=0.1, relheight=0.18)
+            img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
+            img2_label = tk.Label(root, image=img2, bg=x)
+            img2_label.photo = img2
+            img2_label.place(x=750, y=559, relwidth=0.1, relheight=0.15)
+            img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
+            img3_label = tk.Label(root, image=img3, bg=x)
+            img3_label.photo = img3
+            img3_label.place(x=750, y=719, relwidth=0.1, relheight=0.2)
+            label2['text'] = format_response(info)
+
+            def clear():
+                label2.config(text='')
+                img1_label.config(image='')
+                img2_label.config(image='')
+                img3_label.config(image='')
+
+            button4 = tk.Button(upper_frame, text='Clear Slot 2', font=('Trebuchet MS', 15), command=lambda: clear())
+
+            button4.place(relx=0.85, rely=0.6, relwidth=0.15, relheight=0.4)
 
 
+        else:
+            url = "https://api-football-v1.p.rapidapi.com/v3/players"
 
+            lg = leagues.league(entry1, entry2, entry3)
+            print(lg)
 
-    else:
-        url = "https://api-football-v1.p.rapidapi.com/v3/players"
+            team = teams.team(entry4, lg, entry3)
 
-        lg = leagues.league(entry1, entry2, entry3)
-        print(lg)
+            print(team)
 
-        team = teams.team(entry4, lg, entry3)
+            querystring = {"team": "%s" % team, "league": "%s" % lg, "season": "%s" % entry3, "search": "%s" % entry5}
 
-        print(team)
+            headers = {
+                "X-RapidAPI-Key": "bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315",
+                "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
 
-        querystring = {"team": "%s" % team, "league": "%s" % lg, "season": "%s" % entry3, "search": "%s" % entry5}
+            response = requests.request("GET", url, headers=headers, params=querystring)
 
-        headers = {
-        "X-RapidAPI-Key":"bf52d49e93msh937c0f1742ea513p1b23c2jsnfcd110a9c315" ,
-        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"}
+            info = response.json()
 
-        response = requests.request("GET", url, headers=headers, params=querystring)
+            q = picture1(info)
+            o = picture2(info)
+            j = picture3(info)
 
-        info = response.json()
+            json_object = json.dumps(info, indent=4)
 
-        q = picture1(info)
-        o = picture2(info)
-        j = picture3(info)
+            # Writing to sample.json
 
-        json_object = json.dumps(info, indent=4)
+            with open("user_info2.json", "w") as outfile:
+                outfile.write(json_object)
 
-        # Writing to sample.json
+            img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
+            img1_label = tk.Label(root, image=img1, bg=x)
+            img1_label.photo = img1
+            img1_label.place(x=750, y=389, relwidth=0.1, relheight=0.18)
+            img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
+            img2_label = tk.Label(root, image=img2, bg=x)
+            img2_label.photo = img2
+            img2_label.place(x=750, y=559, relwidth=0.1, relheight=0.15)
+            img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
+            img3_label = tk.Label(root, image=img3, bg=x)
+            img3_label.photo = img3
+            img3_label.place(x=750, y=719, relwidth=0.1, relheight=0.2)
+            label2['text'] = format_response(info)
 
-        with open("user_info2.json", "w") as outfile:
-            outfile.write(json_object)
+            def clear():
+                label2.config(text='')
+                img1_label.config(image='')
+                img2_label.config(image='')
+                img3_label.config(image='')
 
-        img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
-        img1_label = tk.Label(root, image=img1, bg='white')
-        img1_label.photo = img1
-        img1_label.place(x=750, y=390, relwidth=0.1, relheight=0.15)
-        img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
-        img2_label = tk.Label(root, image=img2, bg='white')
-        img2_label.photo = img2
-        img2_label.place(x=750, y=560, relwidth=0.1, relheight=0.15)
-        img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
-        img3_label = tk.Label(root, image=img3, bg='white')
-        img3_label.photo = img3
-        img3_label.place(x=750, y=720, relwidth=0.1, relheight=0.2)
-        label2['text'] = format_response(info)
+            button4 = tk.Button(upper_frame, text='Clear Slot 2', font=('Trebuchet MS', 15), command=lambda: clear())
 
+            button4.place(relx=0.85, rely=0.6, relwidth=0.15, relheight=0.4)
+    except:
+        print('sad')
+        label2.config(text='There was an error processing \nyour request.'
+                           '\nPlease check your spelling \nand try again.')
     return info
 
 
@@ -340,50 +397,51 @@ background_label.place(x=0, y=0, relwidth=1, relheight=1)
 upper_frame = tk.Frame(root,bg='sky blue', bd=5)
 upper_frame.place(relx=0.5, rely=0.05, relwidth=0.75, relheight=0.25, anchor='n')
 
-entry1 = tk.Entry(upper_frame, font=('Trebuchet MS', 15))
+entry1 = tk.Entry(upper_frame, font=('Trebuchet MS', 15), fg='black')
 entry1.place(relx=0.5, rely=0, relwidth=0.35, relheight=0.2)
 
-entry2 = tk.Entry(upper_frame, font=('Trebuchet MS', 15))
+entry2 = tk.Entry(upper_frame, font=('Trebuchet MS', 15), fg='black')
 entry2.place(relx=0.5, rely=0.2, relwidth=0.35, relheight=0.2)
 
-entry3 = tk.Entry(upper_frame, font=('Trebuchet MS', 15))
+entry3 = tk.Entry(upper_frame, font=('Trebuchet MS', 15), fg='black')
 entry3.place(relx=0.5, rely=0.4, relwidth=0.35, relheight=0.2)
 
-entry4 = tk.Entry(upper_frame, font=('Trebuchet MS', 15))
+entry4 = tk.Entry(upper_frame, font=('Trebuchet MS', 15), fg='black')
 entry4.place(relx=0.5, rely=0.6, relwidth=0.35, relheight=0.2)
 
-entry5 = tk.Entry(upper_frame, font=('Trebuchet MS', 15))
+entry5 = tk.Entry(upper_frame, font=('Trebuchet MS', 15), fg='black')
 entry5.place(relx=0.5, rely=0.8, relwidth=0.35, relheight=0.2)
 
-label8 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Country')
+label8 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Country', fg='black')
 label8.place(relx=0.325, rely=0, relwidth=0.175, relheight=0.2)
 
-label3 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='League')
+label3 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='League', fg='black')
 label3.place(relx=0.325, rely=0.2, relwidth=0.175, relheight=0.2)
 
-label4 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Season')
+label4 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Season', fg='black')
 label4.place(relx=0.325, rely=0.4, relwidth=0.175, relheight=0.2)
 
-label5 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Team')
+label5 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Team', fg='black')
 label5.place(relx=0.325, rely=0.6, relwidth=0.175, relheight=0.2)
 
-label6 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Player')
+label6 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Player', fg='black')
 label6.place(relx=0.325, rely=0.8, relwidth=0.175, relheight=0.2)
 
 label7 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', justify='left'
-                  , text='Welcome to PlayerFinder 2022! \n(Some instructional text)', anchor='nw')
+                  , text='Welcome to PlayerFinder 2022! \n(Some instructional text)', anchor='nw', fg='black')
 
 label7.place(relx=0, relwidth=0.35, relheight=1)
 
 button1 = tk.Button(upper_frame, text="Search!",  font=('Trebuchet MS', 15), command=lambda: ent1(entry1.get(),
                                                                                     entry2.get(), entry3.get(),
                                                                                     entry4.get(), entry5.get()))
-button1.place(relx=0.7, rely=0, relwidth=0.3, relheight=0.5)
+button1.place(relx=0.7, rely=0, relwidth=0.3, relheight=0.3)
 
 button2 = tk.Button(upper_frame, text="Compare!",  font=('Trebuchet MS', 15), command=lambda: ent2(entry1.get(),
                                                                                     entry2.get(), entry3.get(),
                                                                                     entry4.get(), entry5.get()))
-button2.place(relx=0.7, rely=0.5, relwidth=0.3, relheight=0.5)
+button2.place(relx=0.7, rely=0.3, relwidth=0.3, relheight=0.3)
+
 
 lower_frame = tk.Frame(root,bg='sky blue', bd=10)
 lower_frame.place(relx=0.5, rely=0.35, relwidth=0.75, relheight=0.6, anchor='n')
@@ -397,46 +455,83 @@ label1.place(relx=0.14, rely=0, relwidth=0.4, relheight=1)
 label2 = tk.Label(lower_frame, bg='white', font=('Trebuchet MS', 15), anchor='nw', justify='left', bd=4)
 label2.place(relx=0.5, rely=0, relwidth=0.4, relheight=1)
 
-switch = True
+
+img1_label = tk.Label(root, bg='white')
+img1_label.place(x=750, y=390, relwidth=0.1, relheight=0.18)
+
+img2_label = tk.Label(root,bg='white')
+img2_label.place(x=750, y=560, relwidth=0.1, relheight=0.15)
+
+img3_label = tk.Label(root,bg='white')
+img3_label.place(x=750, y=720, relwidth=0.1, relheight=0.2)
+
+
+button3 = tk.Button(upper_frame, text='Clear Slot 1', font=('Trebuchet MS', 15))
+
+button3.place(relx=0.7, rely=0.6, relwidth=0.15, relheight=0.4)
+
+button4 = tk.Button(upper_frame, text='Clear Slot 2', font=('Trebuchet MS', 15))
+
+button4.place(relx=0.85, rely=0.6, relwidth=0.15, relheight=0.4)
+
 def toggle():
 
     global switch
     if switch == True:
-        button3.config(bg="#26242f",
-                      activebackground="#26242f")
         background_label.config(image=background_image2)
-        label.config(bg="#26242f")
-        label1.config(bg="#26242f")
-        label2.config(bg="#26242f")
-        label3.config(bg="#26242f")
-        label4.config(bg="#26242f")
-        label5.config(bg="#26242f")
-        label6.config(bg="#26242f")
-        label7.config(bg="#26242f")
-        entry1.config(bg="#26242f")
-        entry2.config(bg="#26242f")
-        entry3.config(bg="#26242f")
-        entry4.config(bg="#26242f")
-        entry5.config(bg="#26242f")
-        label8.config(bg="#26242f")
-        lower_frame.config(bg="#26242f")
+        label.config(bg="#26242f", fg='white')
+        label1.config(bg="#26242f", fg='white')
+        label2.config(bg="#26242f", fg='white')
+        label3.config(bg="#26242f", fg='white')
+        label4.config(bg="#26242f", fg='white')
+        label5.config(bg="#26242f", fg='white')
+        label6.config(bg="#26242f", fg='white')
+        label7.config(bg="#26242f", fg='white')
+        entry1.config(bg="#26242f", fg='white')
+        entry2.config(bg="#26242f", fg='white')
+        entry3.config(bg="#26242f", fg='white')
+        entry4.config(bg="#26242f", fg='white')
+        entry5.config(bg="#26242f", fg='white')
+        label8.config(bg="#26242f", fg='white')
+        lower_frame.config(bg='beige')
+        upper_frame.config(bg='beige')
+        button5.config(text='Light Mode', fg='white',bg="#26242f",
+                      activebackground="#26242f")
+        img1_label.config(bg="#26242f")
+        img2_label.config(bg="#26242f")
+        img3_label.config(bg="#26242f")
         switch = False
         print('p')
     else:
-        button3.config(bg="white",
-                      activebackground="white")
         background_label.config(image=background_image1)
-        # Changes the window to light theme
+        label.config(bg="white", fg='black')
+        label1.config(bg="white", fg='black')
+        label2.config(bg="white", fg='black')
+        label3.config(bg="white", fg='black')
+        label4.config(bg="white", fg='black')
+        label5.config(bg="white", fg='black')
+        label6.config(bg="white", fg='black')
+        label7.config(bg="white", fg='black')
+        entry1.config(bg="white", fg='black')
+        entry2.config(bg="white", fg='black')
+        entry3.config(bg="white", fg='black')
+        entry4.config(bg="white", fg='black')
+        entry5.config(bg="white", fg='black')
+        label8.config(bg="white", fg='black')
+        lower_frame.config(bg='sky blue')
+        upper_frame.config(bg='sky blue')
+        button5.config(text='Dark Mode', fg='black',bg="white",
+                      activebackground="white")
+        img1_label.config(bg="white")
+        img2_label.config(bg="white")
+        img3_label.config(bg="white")
         switch= True
         print('q')
 
-button3 = tk.Button(upper_frame,
-                bd=0, bg="white",
-                activebackground="white",
-                command=toggle,
-                    text = 'read this!')
 
-button3.place(relx=0, rely=0.5, relwidth=0.3, relheight=0.25)
+button5 = tk.Button(upper_frame, bd=0, bg="white", activebackground="white", command=toggle, text = 'Dark Mode')
+
+button5.place(relx=0, rely=0.5, relwidth=0.3, relheight=0.25)
 
 root.mainloop()
 

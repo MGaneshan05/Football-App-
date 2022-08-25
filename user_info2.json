@@ -1,9 +1,9 @@
 {
     "get": "players",
     "parameters": {
-        "league": "61",
-        "team": "85",
-        "search": "Mbappe",
+        "league": "253",
+        "team": "1616",
+        "search": "Bale",
         "season": "2022"
     },
     "errors": [],
@@ -15,82 +15,82 @@
     "response": [
         {
             "player": {
-                "id": 278,
-                "name": "K. Mbapp\u00e9",
-                "firstname": "Kylian",
-                "lastname": "Mbapp\u00e9 Lottin",
-                "age": 24,
+                "id": 758,
+                "name": "G. Bale",
+                "firstname": "Gareth Frank",
+                "lastname": "Bale",
+                "age": 33,
                 "birth": {
-                    "date": "1998-12-20",
-                    "place": "Paris",
-                    "country": "France"
+                    "date": "1989-07-16",
+                    "place": "Cardiff",
+                    "country": "Wales"
                 },
-                "nationality": "France",
-                "height": "178 cm",
-                "weight": "73 kg",
+                "nationality": "Wales",
+                "height": "185 cm",
+                "weight": "81 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/278.png"
+                "photo": "https://media.api-sports.io/football/players/758.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 85,
-                        "name": "Paris Saint Germain",
-                        "logo": "https://media.api-sports.io/football/teams/85.png"
+                        "id": 1616,
+                        "name": "Los Angeles FC",
+                        "logo": "https://media.api-sports.io/football/teams/1616.png"
                     },
                     "league": {
-                        "id": 61,
-                        "name": "Ligue 1",
-                        "country": "France",
-                        "logo": "https://media.api-sports.io/football/leagues/61.png",
-                        "flag": "https://media.api-sports.io/flags/fr.svg",
+                        "id": 253,
+                        "name": "Major League Soccer",
+                        "country": "USA",
+                        "logo": "https://media.api-sports.io/football/leagues/253.png",
+                        "flag": "https://media.api-sports.io/flags/us.svg",
                         "season": 2022
                     },
                     "games": {
-                        "appearences": 2,
-                        "lineups": 2,
-                        "minutes": 176,
+                        "appearences": 5,
+                        "lineups": 0,
+                        "minutes": 110,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "8.600000",
+                        "rating": "6.800000",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 0,
-                        "out": 1,
-                        "bench": 0
+                        "in": 5,
+                        "out": 0,
+                        "bench": 5
                     },
                     "shots": {
-                        "total": 11,
-                        "on": 7
+                        "total": 5,
+                        "on": 3
                     },
                     "goals": {
-                        "total": 4,
+                        "total": 2,
                         "conceded": 0,
                         "assists": null,
                         "saves": null
                     },
                     "passes": {
-                        "total": 69,
-                        "key": 3,
-                        "accuracy": 29
+                        "total": 51,
+                        "key": 2,
+                        "accuracy": 8
                     },
                     "tackles": {
                         "total": 1,
                         "blocks": null,
-                        "interceptions": 2
+                        "interceptions": null
                     },
                     "duels": {
-                        "total": 24,
+                        "total": 15,
                         "won": 10
                     },
                     "dribbles": {
-                        "attempts": 14,
-                        "success": 6,
+                        "attempts": 3,
+                        "success": 2,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 2,
+                        "drawn": 4,
                         "committed": null
                     },
                     "cards": {
@@ -102,7 +102,7 @@
                         "won": null,
                         "commited": null,
                         "scored": 0,
-                        "missed": 1,
+                        "missed": 0,
                         "saved": null
                     }
                 }

@@ -1,8 +1,8 @@
 {
     "get": "teams",
     "parameters": {
-        "league": "61",
-        "name": "Paris Saint Germain",
+        "league": "253",
+        "name": "Los Angeles FC",
         "season": "2022"
     },
     "errors": [],
@@ -14,22 +14,22 @@
     "response": [
         {
             "team": {
-                "id": 85,
-                "name": "Paris Saint Germain",
-                "code": "PAR",
-                "country": "France",
-                "founded": 1970,
+                "id": 1616,
+                "name": "Los Angeles FC",
+                "code": null,
+                "country": "USA",
+                "founded": 2014,
                 "national": false,
-                "logo": "https://media.api-sports.io/football/teams/85.png"
+                "logo": "https://media.api-sports.io/football/teams/1616.png"
             },
             "venue": {
-                "id": 671,
-                "name": "Parc des Princes",
-                "address": "24, rue du Commandant Guilbaud",
-                "city": "Paris",
-                "capacity": 47929,
+                "id": 1922,
+                "name": "Banc of California Stadium",
+                "address": "3939 S Figueroa Street",
+                "city": "Los Angeles, California",
+                "capacity": 22902,
                 "surface": "grass",
-                "image": "https://media.api-sports.io/football/venues/671.png"
+                "image": "https://media.api-sports.io/football/venues/1922.png"
             }
         }
     ]
