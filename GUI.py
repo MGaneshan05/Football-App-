@@ -173,15 +173,15 @@ def ent1(entry1,entry2,entry3,entry4,entry5):
             img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
             img1_label = tk.Label(root, image=img1, bg=x)
             img1_label.photo = img1
-            img1_label.place(x=250, y=390, relwidth=0.1, relheight=0.18)
+            img1_label.place(relx=0.13, rely=0.36, relwidth=0.1, relheight=0.18)
             img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
             img2_label = tk.Label(root, image=img2, bg=x)
             img2_label.photo = img2
-            img2_label.place(x=250, y=560, relwidth=0.1, relheight=0.15)
+            img2_label.place(relx=0.13, rely=0.56, relwidth=0.1, relheight=0.15)
             img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
             img3_label = tk.Label(root, image=img3, bg=x)
             img3_label.photo = img3
-            img3_label.place(x=250, y=720, relwidth=0.1, relheight=0.2)
+            img3_label.place(relx=0.13, rely=0.7, relwidth=0.1, relheight=0.2)
             label1['text'] = format_response(info)
 
             def clear():
@@ -229,15 +229,15 @@ def ent1(entry1,entry2,entry3,entry4,entry5):
             img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
             img1_label = tk.Label(root, image=img1, bg=x)
             img1_label.photo = img1
-            img1_label.place(x=250, y=390, relwidth=0.1, relheight=0.18)
+            img1_label.place(relx=0.13, rely=0.36, relwidth=0.1, relheight=0.18)
             img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
             img2_label = tk.Label(root, image=img2, bg=x)
             img2_label.photo = img2
-            img2_label.place(x=250, y=560, relwidth=0.1, relheight=0.15)
+            img2_label.place(relx=0.13, rely=0.56, relwidth=0.1, relheight=0.15)
             img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
             img3_label = tk.Label(root, image=img3, bg=x)
             img3_label.photo = img3
-            img3_label.place(x=250, y=720, relwidth=0.1, relheight=0.2)
+            img3_label.place(relx=0.13, rely=0.7, relwidth=0.1, relheight=0.2)
             label1['text'] = format_response(info)
 
             def clear():
@@ -301,15 +301,15 @@ def ent2(entry1,entry2,entry3,entry4,entry5):
             img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
             img1_label = tk.Label(root, image=img1, bg=x)
             img1_label.photo = img1
-            img1_label.place(x=750, y=389, relwidth=0.1, relheight=0.18)
+            img1_label.place(relx=0.4, rely=0.36, relwidth=0.1, relheight=0.18)
             img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
             img2_label = tk.Label(root, image=img2, bg=x)
             img2_label.photo = img2
-            img2_label.place(x=750, y=559, relwidth=0.1, relheight=0.15)
+            img2_label.place(relx=0.4, rely=0.56, relwidth=0.1, relheight=0.15)
             img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
             img3_label = tk.Label(root, image=img3, bg=x)
             img3_label.photo = img3
-            img3_label.place(x=750, y=719, relwidth=0.1, relheight=0.2)
+            img3_label.place(relx=0.4, rely=0.7, relwidth=0.1, relheight=0.2)
             label2['text'] = format_response(info)
 
             def clear():
@@ -357,15 +357,15 @@ def ent2(entry1,entry2,entry3,entry4,entry5):
             img1 = ImageTk.PhotoImage(Image.open('plyrimg.png'))
             img1_label = tk.Label(root, image=img1, bg=x)
             img1_label.photo = img1
-            img1_label.place(x=750, y=389, relwidth=0.1, relheight=0.18)
+            img1_label.place(relx=0.4, rely=0.36, relwidth=0.1, relheight=0.18)
             img2 = ImageTk.PhotoImage(Image.open('tmimg.png'))
             img2_label = tk.Label(root, image=img2, bg=x)
             img2_label.photo = img2
-            img2_label.place(x=750, y=559, relwidth=0.1, relheight=0.15)
+            img2_label.place(relx=0.4, rely=0.56, relwidth=0.1, relheight=0.15)
             img3 = ImageTk.PhotoImage(Image.open('lgimg.png'))
             img3_label = tk.Label(root, image=img3, bg=x)
             img3_label.photo = img3
-            img3_label.place(x=750, y=719, relwidth=0.1, relheight=0.2)
+            img3_label.place(relx=0.4, rely=0.7, relwidth=0.1, relheight=0.2)
             label2['text'] = format_response(info)
 
             def clear():
@@ -427,8 +427,10 @@ label5.place(relx=0.325, rely=0.6, relwidth=0.175, relheight=0.2)
 label6 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', text='Player', fg='black')
 label6.place(relx=0.325, rely=0.8, relwidth=0.175, relheight=0.2)
 
-label7 = tk.Label(upper_frame, font=('Trebuchet MS', 15), bg='white', justify='left'
-                  , text='Welcome to PlayerFinder 2022! \n(Some instructional text)', anchor='nw', fg='black')
+label7 = tk.Label(upper_frame, font=('Trebuchet MS', 11), bg='white', justify='left'
+                  , text='Welcome to PlayerFinder 2022! \n To Start, fill in the details for your desired player. In the name section, \n please type only the players very last name,'
+                         'for example "Trent Alexander \n Arnold", you would type Arnold. You have two slots available, Search \n and Compare. Search will fill the first slot'
+                         ', and compare will fill the \n second. After every search, make sure to clear both slots. \n Please select dark or light mode before using the app.', anchor='nw', fg='black')
 
 label7.place(relx=0, relwidth=0.35, relheight=1)
 
@@ -531,7 +533,7 @@ def toggle():
 
 button5 = tk.Button(upper_frame, bd=0, bg="white", activebackground="white", command=toggle, text = 'Dark Mode')
 
-button5.place(relx=0, rely=0.5, relwidth=0.3, relheight=0.25)
+button5.place(relx=0, rely=0.7, relwidth=0.3, relheight=0.25)
 
 root.mainloop()
 

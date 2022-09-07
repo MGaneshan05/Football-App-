@@ -1,8 +1,8 @@
 {
     "get": "teams",
     "parameters": {
-        "league": "253",
-        "name": "Los Angeles FC",
+        "league": "39",
+        "name": "Manchester United",
         "season": "2022"
     },
     "errors": [],
@@ -14,22 +14,22 @@
     "response": [
         {
             "team": {
-                "id": 1616,
-                "name": "Los Angeles FC",
-                "code": null,
-                "country": "USA",
-                "founded": 2014,
+                "id": 33,
+                "name": "Manchester United",
+                "code": "MUN",
+                "country": "England",
+                "founded": 1878,
                 "national": false,
-                "logo": "https://media.api-sports.io/football/teams/1616.png"
+                "logo": "https://media.api-sports.io/football/teams/33.png"
             },
             "venue": {
-                "id": 1922,
-                "name": "Banc of California Stadium",
-                "address": "3939 S Figueroa Street",
-                "city": "Los Angeles, California",
-                "capacity": 22902,
+                "id": 556,
+                "name": "Old Trafford",
+                "address": "Sir Matt Busby Way",
+                "city": "Manchester",
+                "capacity": 76212,
                 "surface": "grass",
-                "image": "https://media.api-sports.io/football/venues/1922.png"
+                "image": "https://media.api-sports.io/football/venues/556.png"
             }
         }
     ]

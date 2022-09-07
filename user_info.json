@@ -1,9 +1,9 @@
 {
     "get": "players",
     "parameters": {
-        "league": "253",
-        "team": "1616",
-        "search": "Vela",
+        "league": "39",
+        "team": "33",
+        "search": "Antony",
         "season": "2022"
     },
     "errors": [],
@@ -15,93 +15,93 @@
     "response": [
         {
             "player": {
-                "id": 51046,
-                "name": "C. Vela",
-                "firstname": "Carlos Alberto",
-                "lastname": "Vela Garrido",
-                "age": 33,
+                "id": 9971,
+                "name": "Antony",
+                "firstname": "Antony Matheus",
+                "lastname": "dos Santos",
+                "age": 22,
                 "birth": {
-                    "date": "1989-03-01",
-                    "place": "Canc\u00fan",
-                    "country": "Mexico"
+                    "date": "2000-02-24",
+                    "place": "Osasco",
+                    "country": "Brazil"
                 },
-                "nationality": "Mexico",
-                "height": "177 cm",
-                "weight": "73 kg",
+                "nationality": "Brazil",
+                "height": "174 cm",
+                "weight": "63 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/51046.png"
+                "photo": "https://media.api-sports.io/football/players/9971.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 1616,
-                        "name": "Los Angeles FC",
-                        "logo": "https://media.api-sports.io/football/teams/1616.png"
+                        "id": 33,
+                        "name": "Manchester United",
+                        "logo": "https://media.api-sports.io/football/teams/33.png"
                     },
                     "league": {
-                        "id": 253,
-                        "name": "Major League Soccer",
-                        "country": "USA",
-                        "logo": "https://media.api-sports.io/football/leagues/253.png",
-                        "flag": "https://media.api-sports.io/flags/us.svg",
+                        "id": 39,
+                        "name": "Premier League",
+                        "country": "England",
+                        "logo": "https://media.api-sports.io/football/leagues/39.png",
+                        "flag": "https://media.api-sports.io/flags/gb.svg",
                         "season": 2022
                     },
                     "games": {
-                        "appearences": 24,
-                        "lineups": 21,
-                        "minutes": 1836,
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 58,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "7.427272",
+                        "rating": "7.300000",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 3,
-                        "out": 11,
-                        "bench": 3
+                        "in": 0,
+                        "out": 1,
+                        "bench": 0
                     },
                     "shots": {
-                        "total": 33,
-                        "on": 16
+                        "total": 3,
+                        "on": 2
                     },
                     "goals": {
-                        "total": 8,
+                        "total": 1,
                         "conceded": 0,
-                        "assists": 7,
+                        "assists": null,
                         "saves": null
                     },
                     "passes": {
-                        "total": 727,
-                        "key": 63,
-                        "accuracy": 26
+                        "total": 14,
+                        "key": null,
+                        "accuracy": 10
                     },
                     "tackles": {
-                        "total": 11,
-                        "blocks": 1,
-                        "interceptions": 4
+                        "total": 2,
+                        "blocks": null,
+                        "interceptions": 1
                     },
                     "duels": {
-                        "total": 171,
-                        "won": 74
+                        "total": 7,
+                        "won": 3
                     },
                     "dribbles": {
-                        "attempts": 39,
-                        "success": 23,
+                        "attempts": 1,
+                        "success": null,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 30,
-                        "committed": 18
+                        "drawn": 1,
+                        "committed": null
                     },
                     "cards": {
-                        "yellow": 2,
+                        "yellow": 0,
                         "yellowred": 0,
                         "red": 0
                     },
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 1,
+                        "scored": 0,
                         "missed": 0,
                         "saved": null
                     }

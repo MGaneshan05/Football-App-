@@ -1,8 +1,8 @@
 {
     "get": "leagues",
     "parameters": {
-        "country": "USA",
-        "name": "Major League Soccer",
+        "country": "England",
+        "name": "Premier League",
         "season": "2022"
     },
     "errors": [],
@@ -14,21 +14,21 @@
     "response": [
         {
             "league": {
-                "id": 253,
-                "name": "Major League Soccer",
+                "id": 39,
+                "name": "Premier League",
                 "type": "League",
-                "logo": "https://media.api-sports.io/football/leagues/253.png"
+                "logo": "https://media.api-sports.io/football/leagues/39.png"
             },
             "country": {
-                "name": "USA",
-                "code": "US",
-                "flag": "https://media.api-sports.io/flags/us.svg"
+                "name": "England",
+                "code": "GB",
+                "flag": "https://media.api-sports.io/flags/gb.svg"
             },
             "seasons": [
                 {
                     "year": 2022,
-                    "start": "2022-02-26",
-                    "end": "2022-10-09",
+                    "start": "2022-08-05",
+                    "end": "2023-05-28",
                     "current": true,
                     "coverage": {
                         "fixtures": {
