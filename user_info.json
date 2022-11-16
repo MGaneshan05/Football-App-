@@ -2,9 +2,9 @@
     "get": "players",
     "parameters": {
         "league": "39",
-        "team": "33",
-        "search": "Antony",
-        "season": "2022"
+        "search": "Haaland",
+        "season": "2022",
+        "team": "50"
     },
     "errors": [],
     "results": 1,
@@ -15,93 +15,93 @@
     "response": [
         {
             "player": {
-                "id": 9971,
-                "name": "Antony",
-                "firstname": "Antony Matheus",
-                "lastname": "dos Santos",
-                "age": 22,
+                "id": 1100,
+                "name": "E. Haaland",
+                "firstname": "Erling",
+                "lastname": "Braut Haaland",
+                "age": 23,
                 "birth": {
-                    "date": "2000-02-24",
-                    "place": "Osasco",
-                    "country": "Brazil"
+                    "date": "2000-07-21",
+                    "place": "Leeds",
+                    "country": "England"
                 },
-                "nationality": "Brazil",
-                "height": "174 cm",
-                "weight": "63 kg",
+                "nationality": "Norway",
+                "height": "194 cm",
+                "weight": "88 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/9971.png"
+                "photo": "https://media-3.api-sports.io/football/players/1100.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 33,
-                        "name": "Manchester United",
-                        "logo": "https://media.api-sports.io/football/teams/33.png"
+                        "id": 50,
+                        "name": "Manchester City",
+                        "logo": "https://media-3.api-sports.io/football/teams/50.png"
                     },
                     "league": {
                         "id": 39,
                         "name": "Premier League",
                         "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "logo": "https://media-3.api-sports.io/football/leagues/39.png",
+                        "flag": "https://media-1.api-sports.io/flags/gb.svg",
                         "season": 2022
                     },
                     "games": {
-                        "appearences": 1,
-                        "lineups": 1,
-                        "minutes": 58,
+                        "appearences": 26,
+                        "lineups": 25,
+                        "minutes": 2120,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "7.300000",
+                        "rating": "7.376923",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 0,
-                        "out": 1,
-                        "bench": 0
+                        "in": 1,
+                        "out": 9,
+                        "bench": 1
                     },
                     "shots": {
-                        "total": 3,
-                        "on": 2
+                        "total": 74,
+                        "on": 44
                     },
                     "goals": {
-                        "total": 1,
+                        "total": 28,
                         "conceded": 0,
-                        "assists": null,
+                        "assists": 5,
                         "saves": null
                     },
                     "passes": {
-                        "total": 14,
-                        "key": null,
+                        "total": 357,
+                        "key": 20,
                         "accuracy": 10
                     },
                     "tackles": {
-                        "total": 2,
-                        "blocks": null,
-                        "interceptions": 1
+                        "total": 3,
+                        "blocks": 3,
+                        "interceptions": 2
                     },
                     "duels": {
-                        "total": 7,
-                        "won": 3
+                        "total": 162,
+                        "won": 59
                     },
                     "dribbles": {
-                        "attempts": 1,
-                        "success": null,
+                        "attempts": 20,
+                        "success": 6,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 1,
-                        "committed": null
+                        "drawn": 17,
+                        "committed": 27
                     },
                     "cards": {
-                        "yellow": 0,
+                        "yellow": 4,
                         "yellowred": 0,
                         "red": 0
                     },
                     "penalty": {
                         "won": null,
                         "commited": null,
-                        "scored": 0,
+                        "scored": 5,
                         "missed": 0,
                         "saved": null
                     }
