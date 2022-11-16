@@ -1,9 +1,9 @@
 {
     "get": "players",
     "parameters": {
-        "league": "39",
-        "team": "33",
-        "search": "Antony",
+        "league": "78",
+        "team": "157",
+        "search": "Musiala",
         "season": "2022"
     },
     "errors": [],
@@ -15,83 +15,83 @@
     "response": [
         {
             "player": {
-                "id": 9971,
-                "name": "Antony",
-                "firstname": "Antony Matheus",
-                "lastname": "dos Santos",
-                "age": 22,
+                "id": 181812,
+                "name": "Jamal Musiala",
+                "firstname": "Jamal",
+                "lastname": "Musiala",
+                "age": 19,
                 "birth": {
-                    "date": "2000-02-24",
-                    "place": "Osasco",
-                    "country": "Brazil"
+                    "date": "2003-02-26",
+                    "place": "Stuttgart",
+                    "country": "Germany"
                 },
-                "nationality": "Brazil",
-                "height": "174 cm",
-                "weight": "63 kg",
+                "nationality": "Germany",
+                "height": "180 cm",
+                "weight": "68 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/9971.png"
+                "photo": "https://media.api-sports.io/football/players/181812.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 33,
-                        "name": "Manchester United",
-                        "logo": "https://media.api-sports.io/football/teams/33.png"
+                        "id": 157,
+                        "name": "Bayern Munich",
+                        "logo": "https://media.api-sports.io/football/teams/157.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 78,
+                        "name": "Bundesliga",
+                        "country": "Germany",
+                        "logo": "https://media.api-sports.io/football/leagues/78.png",
+                        "flag": "https://media.api-sports.io/flags/de.svg",
                         "season": 2022
                     },
                     "games": {
-                        "appearences": 1,
-                        "lineups": 1,
-                        "minutes": 58,
+                        "appearences": 14,
+                        "lineups": 12,
+                        "minutes": 1000,
                         "number": null,
                         "position": "Attacker",
-                        "rating": "7.300000",
+                        "rating": "7.264285",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 0,
-                        "out": 1,
-                        "bench": 0
+                        "in": 2,
+                        "out": 9,
+                        "bench": 2
                     },
                     "shots": {
-                        "total": 3,
-                        "on": 2
+                        "total": 24,
+                        "on": 17
                     },
                     "goals": {
-                        "total": 1,
+                        "total": 9,
                         "conceded": 0,
-                        "assists": null,
+                        "assists": 6,
                         "saves": null
                     },
                     "passes": {
-                        "total": 14,
-                        "key": null,
-                        "accuracy": 10
+                        "total": 441,
+                        "key": 25,
+                        "accuracy": 26
                     },
                     "tackles": {
-                        "total": 2,
-                        "blocks": null,
-                        "interceptions": 1
+                        "total": 16,
+                        "blocks": 1,
+                        "interceptions": 7
                     },
                     "duels": {
-                        "total": 7,
-                        "won": 3
+                        "total": 134,
+                        "won": 61
                     },
                     "dribbles": {
-                        "attempts": 1,
-                        "success": null,
+                        "attempts": 44,
+                        "success": 21,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 1,
-                        "committed": null
+                        "drawn": 17,
+                        "committed": 8
                     },
                     "cards": {
                         "yellow": 0,

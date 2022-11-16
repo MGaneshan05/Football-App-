@@ -1,8 +1,8 @@
 {
     "get": "teams",
     "parameters": {
-        "league": "39",
-        "name": "Manchester United",
+        "league": "78",
+        "name": "Bayern Munich",
         "season": "2022"
     },
     "errors": [],
@@ -14,22 +14,22 @@
     "response": [
         {
             "team": {
-                "id": 33,
-                "name": "Manchester United",
-                "code": "MUN",
-                "country": "England",
-                "founded": 1878,
+                "id": 157,
+                "name": "Bayern Munich",
+                "code": "BAY",
+                "country": "Germany",
+                "founded": 1900,
                 "national": false,
-                "logo": "https://media.api-sports.io/football/teams/33.png"
+                "logo": "https://media.api-sports.io/football/teams/157.png"
             },
             "venue": {
-                "id": 556,
-                "name": "Old Trafford",
-                "address": "Sir Matt Busby Way",
-                "city": "Manchester",
-                "capacity": 76212,
+                "id": 700,
+                "name": "Allianz Arena",
+                "address": "Werner-Heisenberg-Allee 25",
+                "city": "M\u00fcnchen",
+                "capacity": 75000,
                 "surface": "grass",
-                "image": "https://media.api-sports.io/football/venues/556.png"
+                "image": "https://media.api-sports.io/football/venues/700.png"
             }
         }
     ]

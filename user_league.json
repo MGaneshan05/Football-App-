@@ -1,8 +1,8 @@
 {
     "get": "leagues",
     "parameters": {
-        "country": "England",
-        "name": "Premier League",
+        "country": "Germany",
+        "name": "Bundesliga",
         "season": "2022"
     },
     "errors": [],
@@ -14,21 +14,21 @@
     "response": [
         {
             "league": {
-                "id": 39,
-                "name": "Premier League",
+                "id": 78,
+                "name": "Bundesliga",
                 "type": "League",
-                "logo": "https://media.api-sports.io/football/leagues/39.png"
+                "logo": "https://media.api-sports.io/football/leagues/78.png"
             },
             "country": {
-                "name": "England",
-                "code": "GB",
-                "flag": "https://media.api-sports.io/flags/gb.svg"
+                "name": "Germany",
+                "code": "DE",
+                "flag": "https://media.api-sports.io/flags/de.svg"
             },
             "seasons": [
                 {
                     "year": 2022,
                     "start": "2022-08-05",
-                    "end": "2023-05-28",
+                    "end": "2023-05-27",
                     "current": true,
                     "coverage": {
                         "fixtures": {

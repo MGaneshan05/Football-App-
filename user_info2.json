@@ -1,9 +1,9 @@
 {
     "get": "players",
     "parameters": {
-        "league": "39",
-        "team": "33",
-        "search": "Sancho",
+        "league": "140",
+        "team": "529",
+        "search": "Pedri",
         "season": "2022"
     },
     "errors": [],
@@ -15,83 +15,83 @@
     "response": [
         {
             "player": {
-                "id": 18,
-                "name": "J. Sancho",
-                "firstname": "Jadon Malik",
-                "lastname": "Sancho",
-                "age": 22,
+                "id": 133609,
+                "name": "Pedri",
+                "firstname": "Pedro",
+                "lastname": "Gonz\u00e1lez L\u00f3pez",
+                "age": 20,
                 "birth": {
-                    "date": "2000-03-25",
-                    "place": "London",
-                    "country": "England"
+                    "date": "2002-11-25",
+                    "place": "Tegueste",
+                    "country": "Spain"
                 },
-                "nationality": "England",
-                "height": "180 cm",
-                "weight": "76 kg",
+                "nationality": "Spain",
+                "height": "174 cm",
+                "weight": "60 kg",
                 "injured": false,
-                "photo": "https://media.api-sports.io/football/players/18.png"
+                "photo": "https://media.api-sports.io/football/players/133609.png"
             },
             "statistics": [
                 {
                     "team": {
-                        "id": 33,
-                        "name": "Manchester United",
-                        "logo": "https://media.api-sports.io/football/teams/33.png"
+                        "id": 529,
+                        "name": "Barcelona",
+                        "logo": "https://media.api-sports.io/football/teams/529.png"
                     },
                     "league": {
-                        "id": 39,
-                        "name": "Premier League",
-                        "country": "England",
-                        "logo": "https://media.api-sports.io/football/leagues/39.png",
-                        "flag": "https://media.api-sports.io/flags/gb.svg",
+                        "id": 140,
+                        "name": "La Liga",
+                        "country": "Spain",
+                        "logo": "https://media.api-sports.io/football/leagues/140.png",
+                        "flag": "https://media.api-sports.io/flags/es.svg",
                         "season": 2022
                     },
                     "games": {
-                        "appearences": 6,
-                        "lineups": 6,
-                        "minutes": 424,
+                        "appearences": 14,
+                        "lineups": 12,
+                        "minutes": 1030,
                         "number": null,
-                        "position": "Attacker",
-                        "rating": "6.900000",
+                        "position": "Midfielder",
+                        "rating": "7.300000",
                         "captain": false
                     },
                     "substitutes": {
-                        "in": 0,
+                        "in": 2,
                         "out": 6,
-                        "bench": 0
+                        "bench": 2
                     },
                     "shots": {
-                        "total": 3,
-                        "on": 3
+                        "total": 8,
+                        "on": 4
                     },
                     "goals": {
-                        "total": 2,
+                        "total": 3,
                         "conceded": 0,
                         "assists": null,
                         "saves": null
                     },
                     "passes": {
-                        "total": 157,
-                        "key": 5,
-                        "accuracy": 21
+                        "total": 719,
+                        "key": 18,
+                        "accuracy": 46
                     },
                     "tackles": {
-                        "total": 3,
+                        "total": 20,
                         "blocks": null,
-                        "interceptions": 2
+                        "interceptions": 9
                     },
                     "duels": {
-                        "total": 27,
-                        "won": 14
+                        "total": 104,
+                        "won": 58
                     },
                     "dribbles": {
-                        "attempts": 12,
-                        "success": 7,
+                        "attempts": 24,
+                        "success": 15,
                         "past": null
                     },
                     "fouls": {
-                        "drawn": 2,
-                        "committed": 2
+                        "drawn": 22,
+                        "committed": 4
                     },
                     "cards": {
                         "yellow": 0,
