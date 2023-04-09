@@ -334,7 +334,7 @@ def tm2(entry1, entry2, entry3, entry4):
 
 
        def clear():
-           label1.config(text='')
+           label2.config(text='')
            img1_label.config(image='')
            img2_label.config(image='')
            img3_label.config(image='')

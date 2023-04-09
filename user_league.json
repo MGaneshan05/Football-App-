@@ -1,8 +1,8 @@
 {
     "get": "leagues",
     "parameters": {
-        "country": "England",
-        "name": "Premier League",
+        "country": "France",
+        "name": "Ligue 1",
         "season": "2022"
     },
     "errors": [],
@@ -14,21 +14,21 @@
     "response": [
         {
             "league": {
-                "id": 39,
-                "name": "Premier League",
+                "id": 61,
+                "name": "Ligue 1",
                 "type": "League",
-                "logo": "https://media-1.api-sports.io/football/leagues/39.png"
+                "logo": "https://media-2.api-sports.io/football/leagues/61.png"
             },
             "country": {
-                "name": "England",
-                "code": "GB",
-                "flag": "https://media-2.api-sports.io/flags/gb.svg"
+                "name": "France",
+                "code": "FR",
+                "flag": "https://media-2.api-sports.io/flags/fr.svg"
             },
             "seasons": [
                 {
                     "year": 2022,
                     "start": "2022-08-05",
-                    "end": "2023-05-28",
+                    "end": "2023-06-03",
                     "current": true,
                     "coverage": {
                         "fixtures": {
